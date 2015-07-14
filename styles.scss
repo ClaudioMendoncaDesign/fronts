@@ -70,11 +70,12 @@ body {
 
     header {
         padding: 20px;
-
-        
+        position: relative;
+        z-index: 9;
+        box-shadow: 3px 0 5px rgba(0,0,0,0.2);
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             text-transform: uppercase;
             font-weight: 600;
             line-height: 1.2;
@@ -99,6 +100,8 @@ body {
             padding: 20px;
             background-color: $dark_gray;
             color: white;
+            z-index: 8;
+            box-shadow: 3px 0 5px rgba(0,0,0,0.15);
         }
 
         .e-projects {
