@@ -1,0 +1,74 @@
+.b-projects {
+    &.m-data header { background-color: $teal; }
+    &.m-collective-inteligence header { background-color: $green; }
+    &.m-mental-models header { background-color: $pink; }
+
+    header {
+        padding: 20px;
+        position: relative;
+        z-index: 9;
+        box-shadow: 3px 0 5px rgba(0,0,0,0.2);
+
+        h2 {
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+            padding: 0;
+            font-weight: 400;
+        }
+
+        h2, h3 {
+            color: white;
+        }
+    }
+
+    .e-question {
+        padding: 20px;
+        background-color: $dark_gray;
+        color: white;
+        z-index: 8;
+        box-shadow: 3px 0 5px rgba(0,0,0,0.15);
+    }
+
+    .e-project-tile {
+        padding: 15px 20px;
+        background-color: $very_light_gray;
+        font-size: 1.3rem;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+.b-projects {
+    display: flex;
+
+    header { width: 20%; }
+
+    .e-section-content {
+        width: 80%;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+
+        .e-question { 
+            background-color: #333;
+            color: white;
+        }
+
+        .e-project-tile {
+            width: 20%;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-right: 1px solid rgba(0,0,0,0.1);
+            padding: 40px 20px;
+            // padding-bottom: 10%;
+        }
+    }
+}
+}
