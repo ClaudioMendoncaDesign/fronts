@@ -9,8 +9,11 @@ $pink: rgba(197, 15, 60, 1);
 $white_50: rgba(255,255,255, 0.5);
 $white: rgba(255,255,255, 1);
 
-* { box-sizing: border-box; }
+@mixin transition {
+    transition: all .4s ease;
+}
 
+* { box-sizing: border-box; }
 
 body {
     font-family: proxima-nova, sans-serif;
@@ -18,50 +21,57 @@ body {
     margin: 0;
 }
 
-.b-main-nav {
-    background-color: $purple;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-    padding: 15px 20px 0;
-    position: relative;
-    z-index: 10;
-    display: flex;
-
-    a {
-        color: $white_50;
-        margin-left:10px;
-
-        &:hover {
-            color: $white;
-        }
-    }
-
-    .e-left {
-        width: 10%;
-    }
-
-    .e-center {
-        flex: 1;
-        text-align: center;
-
-        .e-logo {
-            height: 30px;
-        }
-
-        h1 {
-            color: transparent;
-            padding: 0;
-            margin: 0;
-            margin-top: -5px;
-
-        }
-    }
-
-    .e-right {
-        width: 10%;
-        text-align: right;
-    }
+a {
+    text-decoration: none;
 }
 
 
-@import 'projects1';
-@import 'projects2';
+.b-sticky-message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 50px;
+    background-color: #333;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.3);
+    display: flex;
+
+    p {
+        color: white;
+        flex: 1;
+        margin: 10px;
+    }
+
+    .e-close {
+        width: 10%;
+        color: $white_50;
+        margin: 10px;
+        text-align: right;
+
+        &:hover {
+            color: $white;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.b-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 1;
+
+    &.m-active {
+        display: block;
+    }   
+}
+
+@import 'top-menu';
+@import 'homepage';
+@import 'sandbox';
+// @import 'projects1';
+// @import 'projects2';

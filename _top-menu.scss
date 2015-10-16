@@ -1,0 +1,81 @@
+.b-main-nav {
+    background-color: $purple;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    padding: 15px 20px 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+
+    .fa {
+        color: $white_50;
+        margin-left:10px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .e-left {
+        width: 30%;
+    }
+
+    .e-center {
+        flex: 1;
+        text-align: center;
+
+        .e-logo {
+            height: 30px;
+        }
+
+        h1 {
+            color: transparent;
+            padding: 0;
+            margin: 0;
+            margin-top: -5px;
+        }
+    }
+
+    .e-right {
+        width: 30%;
+        text-align: right;
+    }
+}
+
+
+.b-menu {
+    position: fixed;
+    width: 300px;
+    left: -300px;
+    background-color: $teal;
+    top: 50px;
+    bottom: 0;
+    z-index: 8;
+    display: flex;
+    flex-flow: column;
+    @include transition;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+
+    &.m-active {
+        @include transition;
+        left: 0;
+    }
+
+    a {
+        flex: 1;
+        text-align: center;
+        display: inline-block;
+        color: white;
+        font-size: 1.3rem;
+        padding: 48px;
+        @include transition;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.4);
+            @include transition;
+        }
+
+
+    }
+}
